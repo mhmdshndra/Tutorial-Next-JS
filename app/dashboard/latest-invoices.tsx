@@ -17,9 +17,7 @@ export default function LatestInvoices({
 }) {
   return (
     <div className="col-span-4 rounded-lg border p-4 shadow bg-white flex flex-col">
-      <h2 className="mb-4 text-sm font-medium text-gray-600">
-        Latest Invoices
-      </h2>
+      <h2 className="mb-4 text-sm font-medium text-gray-600">Latest Invoices</h2>
 
       <div className="flex grow flex-col justify-between rounded-md bg-gray-50 p-4">
         <div className="bg-white px-4">

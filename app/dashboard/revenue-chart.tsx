@@ -1,13 +1,8 @@
 import { generateYAxis } from '@/app/lib/utils';
 import { CalendarIcon } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
 import { Revenue } from '@/app/lib/definitions';
 
-export default function RevenueChart({
-  revenue,
-}: {
-  revenue: Revenue[];
-}) {
+export default function RevenueChart({ revenue }: { revenue: Revenue[] }) {
   const chartHeight = 350;
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
@@ -17,13 +12,11 @@ export default function RevenueChart({
 
   return (
     <div className="col-span-4 rounded-lg border p-4 shadow bg-white">
-      <h2 className="mb-4 text-sm font-medium text-gray-600">
-        Recent Revenue
-      </h2>
+      <h2 className="mb-4 text-sm font-medium text-gray-600">Recent Revenue</h2>
 
       <div className="rounded-md bg-gray-50 p-4">
         <div className="grid grid-cols-12 items-end gap-2 md:gap-4">
-          {/* Y Axis labels */}
+          {/* Y Axis */}
           <div
             className="mb-6 hidden flex-col justify-between text-xs text-gray-400 sm:flex"
             style={{ height: `${chartHeight}px` }}
